@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -118,8 +119,17 @@
               "devServerTarget": "test-angular:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/test-angular",
+            "netlifyToken": "9ae58dff71403fe284acb2dd8b423d889a246ec63ea419c51fc2bc637a2d36eb",
+            "siteId": "952c9a3f-6c69-4eab-abce-4c4a1654c430"
+          }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "test-angular"
 }
